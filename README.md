@@ -277,8 +277,9 @@ Stage-specific documentation:
 
 The UI is a PySide6 desktop application for demonstrating the pipeline interactively.
 
-<!-- Suggested visual placement: full dashboard screenshot or short GIF. -->
-<!-- ![EMBER dashboard overview](docs/images/ui-dashboard-overview.png) -->
+![EMBER dashboard overview](docs/images/ember-dashboard-overview.png)
+
+The dashboard combines scenario context, fire/smoke detections, structured reasoning, and local system monitoring in one operator-facing view.
 
 ```bash
 uv run python ui/main_window.py
@@ -303,21 +304,19 @@ sudo uv run python ui/main_window.py
 
 See [ui/README.md](ui/README.md) for details.
 
-Recommended README visuals to add when final screenshots are available:
+Example outputs:
 
-<!-- Suggested visual placement: YOLO annotated image panel. -->
-<!-- ![YOLO annotated wildfire detection](docs/images/yolo-annotated-output.png) -->
+![YOLO annotated wildfire detection](docs/images/yolo-annotated-output.png)
 
-<!-- Suggested visual placement: operational scenario map. -->
-<!-- ![Operational scenario map](docs/images/scenario-map.png) -->
+YOLO preprocessing identifies smoke/fire regions before the image reaches the multimodal LLM.
 
-<!-- Suggested visual placement: LLM reasoning output panel. -->
-<!-- ![LLM reasoning output panel](docs/images/reasoning-output-panel.png) -->
+![Operational scenario map](docs/images/scenario-map.png)
 
-- Full dashboard: show the complete operator-facing UI with image preview, model controls, system monitor, and output panels.
-- YOLO annotated image: show fire/smoke bounding boxes and confidence values.
-- Scenario map: show how geographic context is presented to the user.
-- Reasoning output panel: show classification, situation brief, recommendation, and tactical reasoning.
+Scenario maps expose roads, water sources, settlements, and fire origin context used for operational reasoning.
+
+![LLM reasoning output panel](docs/images/reasoning-output-panel.png)
+
+The reasoning panel shows key constraints, a situation brief, model reasoning, and response recommendations.
 
 ## Data and Operational Context
 
